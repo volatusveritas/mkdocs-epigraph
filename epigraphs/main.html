@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>{{ page.title }} - {{ config.site_name }}</title>
+
+        <meta charset="utf-8">
+        <meta name="author" content="{{ config.site_author }}">
+        <meta name="description" content="{{ config.site_description }}">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="stylesheet" href="{{ base_url }}/css/main.css">
+    </head>
+    
+
+    <body>
+        <header>
+            <h1>{{ config.site_name }}</h1>
+            <p>{{ config.site_description }}</p>
+        </header>
+
+        <div class="content">
+            {{ page.content }}
+        </div>
+    </body>
+</html>

@@ -1,1 +1,12 @@
-site_name: My Docs
+site_name: "Vathenaeum"
+site_description: "One's wit, in bits and bytes"
+site_author: "Volatus"
+copyright: "&copy 2021 Lucas B. \"Volatus\" Martins. Some rights reserved."
+
+nav:
+    - "Home": "index.md"
+    - "Testpage": "collios.md"
+
+theme:
+    name: null
+    custom_dir: "epigraphs/"

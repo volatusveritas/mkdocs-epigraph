@@ -67,44 +67,66 @@ header p {
 }
 
 
-header h1 {
-    font-size: 18px;
+.content h1, h2, h3, h4, h5, h6 {
+    font-weight: normal;
 }
 
 
-header p {
-    font-size: 12px;
-}
+/* Responsive sizing BEGIN */
+header h1 { font-size: 18px; }
+header p { font-size: 12px; }
+
+.content p, li { font-size: 10px; }
+
+.content h1 { font-size: 16px; }
+.content h2 { font-size: 14px; }
+.content h3 { font-size: 12px; }
+.content h4 { font-size: 10px; }
+.content h5 { font-size: 09px; }
+.content h6 { font-size: 08px; }
+/* Responsive sizing END */
 
 
 @media only screen and (min-width: 768px) {
-    header h1 {
-        font-size: 20px;
-    }
+    header h1 { font-size: 20px; }
+    header p { font-size: 12px; }
     
-    header p {
-        font-size: 12px;
-    }
+    .content p, li { font-size: 11px; }
+    
+    .content h1 { font-size: 16px; }
+    .content h2 { font-size: 14px; }
+    .content h3 { font-size: 12px; }
+    .content h4 { font-size: 11px; }
+    .content h5 { font-size: 10px; }
+    .content h6 { font-size: 09px; }
 }
 
 
 @media only screen and (min-width: 992px) {
-    header h1 {
-        font-size: 22px;
-    }
-
-    header p {
-        font-size: 13px;
-    }
+    header h1 { font-size: 22px; }
+    header p { font-size: 13px; }
+    
+    .content p, li { font-size: 12px; }
+    
+    .content h1 { font-size: 18px; }
+    .content h2 { font-size: 16px; }
+    .content h3 { font-size: 14px; }
+    .content h4 { font-size: 12px; }
+    .content h5 { font-size: 11px; }
+    .content h6 { font-size: 10px; }
 }
 
 
 @media only screen and (min-width: 1200px) {
-    header h1 {
-        font-size: 24px;
-    }
-
-    header p {
-        font-size: 14px;
-    }
+    header h1 { font-size: 24px; }
+    header p { font-size: 14px; }
+    
+    .content p, li { font-size: 14px; }
+    
+    .content h1 { font-size: 20px; }
+    .content h2 { font-size: 18px; }
+    .content h3 { font-size: 16px; }
+    .content h4 { font-size: 14px; }
+    .content h5 { font-size: 12px; }
+    .content h6 { font-size: 11px; }
 }

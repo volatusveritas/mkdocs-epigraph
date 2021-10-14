@@ -1,11 +1,32 @@
+@import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
 @import url("reset.css");
-@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
 
 
 :root {
-    /* Theme Colors */
-    --fadeblack: #16161a;
-    --fadewhite: #fafaf5;
+    /* Theme Colors (Gruvbox) */
+    --color-bg:     #282828;
+    --color-fg:     #ebdbb2;
+    --color-red:    #fb4934;
+    --color-gray:   #928374;
+    --color-blue:   #83a598;
+    --color-aqua:   #8ec07c;
+    --color-green:  #b8bb26;
+    --color-yellow: #fabd2f;
+    --color-purple: #d3869b;
+    --color-orange: #fe8019;
+
+    --color-bg0: #282828;
+    --color-bg1: #3c3836;
+    --color-bg2: #504945;
+    --color-bg3: #665c54;
+    --color-bg4: #7c6f64;
+
+    --color-fg0: #fbf1c7;
+    --color-fg2: #d5c4a1;
+    --color-fg3: #bdae93;
+    --color-fg4: #a89984;
 }
 
 
@@ -20,78 +41,131 @@ body {
     font-family: "Fira Code", monospace;
     font-weight: lighter;
     
-    color: var(--fadewhite);
-    background-color: var(--fadeblack);
+    color: var(--color-fg);
+    background-color: var(--color-bg);
 }
 
 
-pre, code {
-    font-family: Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console",
-        "Lucida Sans Typewriter", "DejaVu Sans Mono",
+code {
+    font-family: "Source Code Pro", Consolas, "Andale Mono WT", "Andale Mono",
+        "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono",
         "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco,
         "Courier New", Courier, monospace;
 }
 
 
-.content pre {
+.content pre, code {
     overflow-x: auto;
-}
-
-
-/* Responsive Content */
-[class*="col-"] {
-    width: 100%;
+    line-height: 1.2;
 }
 
 
 header {
-    color: var(--fadeblack);
-    background-color: var(--fadewhite);
+    color: var(--color-bg);
+    background-color: var(--color-fg);
 
     text-align: center;
 
     padding: 8px 0px;
 }
 
-
-header h1 {
+header .title {
     font-weight: bold;
     
     text-transform: uppercase;
 }
 
-
-header p {
+header .subtitle {
     font-weight: normal;
     font-style: italic;
 }
 
 
-.content h1, h2, h3, h4, h5, h6 {
+footer .footer-text { text-align: center; }
+
+
+/* Link/anchor styling */
+a { 
+    color: var(--color-aqua);
+
     font-weight: normal;
 }
 
+a:hover { text-decoration: underline; }
+
+
+.content h1, h2, h3, h4, h5, h6 { font-weight: normal; }
+
+.content h1, h2, h3 { color: var(--color-fg0); }
+
+.content h4, h5, h6 { color: var(--color-fg4); }
+
 
 /* Responsive sizing BEGIN */
-header h1 { font-size: 18px; }
-header p { font-size: 12px; }
+.col-1  { width: 8.33%;  }
+.col-2  { width: 16.66%; }
+.col-3  { width: 25%;    }
+.col-4  { width: 33.33%; }
+.col-5  { width: 41.66%; }
+.col-6  { width: 50%;    }
+.col-7  { width: 58.33%; }
+.col-8  { width: 66.66%; }
+.col-9  { width: 75%;    }
+.col-10 { width: 83.33%; }
+.col-11 { width: 91.66%; }
+.col-12 { width: 100%;   }
 
-.content p, li { font-size: 10px; }
 
-.content h1 { font-size: 16px; }
-.content h2 { font-size: 14px; }
-.content h3 { font-size: 12px; }
-.content h4 { font-size: 10px; }
-.content h5 { font-size: 09px; }
-.content h6 { font-size: 08px; }
-/* Responsive sizing END */
+[class*="col-"] {
+    float: left;
+    padding: 15px;
+}
+
+
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+
+@media only screen and (max-width: 768px) {
+    [class*="col-"] {
+        width: 100%;
+
+        float: left;
+
+        padding: 15px;
+    }
+
+    .main-display { margin: 12px; }
+
+    header .title { font-size: 18px; }
+    
+    header .subtitle { font-size: 12px; }
+    
+    footer .footer-text { font-size: 9px; }
+    
+    .content p, li, pre, code { font-size: 10px; }
+    
+    .content h1 { font-size: 16px; }
+    .content h2 { font-size: 14px; }
+    .content h3 { font-size: 12px; }
+    .content h4 { font-size: 10px; }
+    .content h5 { font-size: 09px; }
+    .content h6 { font-size: 08px; }
+}
 
 
 @media only screen and (min-width: 768px) {
-    header h1 { font-size: 20px; }
-    header p { font-size: 12px; }
+    .main-display { margin: 14px 6vw; }
+
+    header .title { font-size: 20px; }
+    header .subtitle { font-size: 12px; }
     
-    .content p, li { font-size: 11px; }
+    footer .footer-text { font-size: 10px; }
+
+    .content p, li, pre, code { font-size: 11px; }
     
     .content h1 { font-size: 16px; }
     .content h2 { font-size: 14px; }
@@ -103,10 +177,14 @@ header p { font-size: 12px; }
 
 
 @media only screen and (min-width: 992px) {
-    header h1 { font-size: 22px; }
-    header p { font-size: 13px; }
+    .main-display { margin: 16px 7vw; }
+
+    header .title { font-size: 22px; }
+    header .subtitle { font-size: 13px; }
     
-    .content p, li { font-size: 12px; }
+    footer .footer-text { font-size: 11px; }
+
+    .content p, li, pre, code { font-size: 12px; }
     
     .content h1 { font-size: 18px; }
     .content h2 { font-size: 16px; }
@@ -118,10 +196,12 @@ header p { font-size: 12px; }
 
 
 @media only screen and (min-width: 1200px) {
-    header h1 { font-size: 24px; }
-    header p { font-size: 14px; }
+    .main-display { margin: 18px 8vw; }
+
+    header .title { font-size: 24px; }
+    header .subtitle { font-size: 14px; }
     
-    .content p, li { font-size: 14px; }
+    .content p, li, pre, code { font-size: 14px; }
     
     .content h1 { font-size: 20px; }
     .content h2 { font-size: 18px; }
@@ -130,3 +210,4 @@ header p { font-size: 12px; }
     .content h5 { font-size: 12px; }
     .content h6 { font-size: 11px; }
 }
+/* Responsive sizing END */

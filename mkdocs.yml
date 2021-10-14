@@ -5,7 +5,8 @@ copyright: "&copy 2021 Lucas B. \"Volatus\" Martins. Some rights reserved."
 
 nav:
     - "Home": "index.md"
-    - "Testpage": "collios.md"
+    - "Semifull Syntax": "collios.md"
+    - "Link Testing": "linktest.md"
 
 theme:
     name: null

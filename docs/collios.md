@@ -265,7 +265,7 @@ it's also easy to use Markdown to write about Markdown's own syntax.
 
 ```
 tell application "Foo"
-    beep
+    beep askdjfklasdjfklasjdfkljsdaklfjklsadfj long line a a a  b b aklbkalsdjfklsdjfklkkajsdklfjsdklafjklasdjfk kasdjfklsadj klasdjfkl
 end tell
 ```
 

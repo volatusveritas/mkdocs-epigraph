@@ -1,6 +1,10 @@
+/* Font Imports */
+/* [fira code] */
 @import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
+/* [source code pro] */
 @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
+/* External CSS Imports */
 @import url("reset.css");
 
 
@@ -60,6 +64,7 @@ code {
 }
 
 
+/* Header styling */
 header {
     color: var(--color-bg);
     background-color: var(--color-fg);
@@ -81,6 +86,7 @@ header .subtitle {
 }
 
 
+/* Footer styling */
 footer .footer-text { text-align: center; }
 
 
@@ -94,7 +100,8 @@ a {
 a:hover { text-decoration: underline; }
 
 
-.content h1 { font-weight: 550; }
+/* Header styling */
+.content h1 { font-weight: 500; }
 
 .content h2, h3, h4, h5, h6 { font-weight: normal; }
 
@@ -103,10 +110,11 @@ a:hover { text-decoration: underline; }
 .content h4, h5, h6 { color: var(--color-fg4); }
 
 
+/* Text formatting styling */
 .content b, strong {
-    font-weight: 550;
+    font-weight: 500;
 
-    color: var(--color-red);
+    color: var(--color-orange);
 }
 
 .content i, em {
@@ -116,30 +124,18 @@ a:hover { text-decoration: underline; }
 }
 
 
+/* Article spacing styling */
+.content h1, h2, h3, h4, h5, h6 { margin-bottom: 0.2rem; }
+
+.content h2, h3, h4, h5, h6 { margin-top: 0.8em; }
+
+
 /* Responsive sizing BEGIN */
-.col-1  { width: 8.33%;  }
-.col-2  { width: 16.66%; }
-.col-3  { width: 25%;    }
-.col-4  { width: 33.33%; }
-.col-5  { width: 41.66%; }
-.col-6  { width: 50%;    }
-.col-7  { width: 58.33%; }
-.col-8  { width: 66.66%; }
-.col-9  { width: 75%;    }
-.col-10 { width: 83.33%; }
-.col-11 { width: 91.66%; }
-.col-12 { width: 100%;   }
-
-
-[class*="col-"] {
-    float: left;
-    padding: 15px;
-}
-
-
 .row::after {
     content: "";
+
     clear: both;
+
     display: table;
 }
 
@@ -149,13 +145,16 @@ a:hover { text-decoration: underline; }
 }
 
 
+[class*="col-"] {
+    float: left;
+
+    padding: 15px;
+}
+
+
 @media only screen and (max-width: 768px) {
     [class*="col-"] {
         width: 100%;
-
-        float: left;
-
-        padding: 15px;
     }
 
     .main-display { margin: 12px; }
@@ -178,6 +177,19 @@ a:hover { text-decoration: underline; }
 
 
 @media only screen and (min-width: 768px) {
+    .col-1  { width: 8.33%;  }
+    .col-2  { width: 16.66%; }
+    .col-3  { width: 25%;    }
+    .col-4  { width: 33.33%; }
+    .col-5  { width: 41.66%; }
+    .col-6  { width: 50%;    }
+    .col-7  { width: 58.33%; }
+    .col-8  { width: 66.66%; }
+    .col-9  { width: 75%;    }
+    .col-10 { width: 83.33%; }
+    .col-11 { width: 91.66%; }
+    .col-12 { width: 100%;   }
+
     .main-display .nav-menu {
         display: initial;
     }
@@ -201,10 +213,6 @@ a:hover { text-decoration: underline; }
 
 
 @media only screen and (min-width: 992px) {
-    .main-display .nav-menu {
-        display: initial;
-    }
-
     .main-display { margin: 16px 7vw; }
 
     header .title { font-size: 22px; }
@@ -224,10 +232,6 @@ a:hover { text-decoration: underline; }
 
 
 @media only screen and (min-width: 1200px) {
-    .main-display .nav-menu {
-        display: initial;
-    }
-
     .main-display { margin: 18px 8vw; }
 
     header .title { font-size: 24px; }

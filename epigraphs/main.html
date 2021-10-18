@@ -27,8 +27,8 @@
                         <li>{{ nav_item.title }}
                             <ul>
                             {% for nav_subitem in nav_item.children %}
-                            <li class="{% if nav_subitem.active %}current{% endif %}">
-                                <a href="{{ nav_item.url|url }}">{{ nav_item.title }}</a>
+                                <li class="{% if nav_subitem.active %}current{% endif %}">
+                                    <a href="{{ nav_subitem.url|url }}">{{ nav_subitem.title }}</a>
                                 </li>
                             {% endfor %}
                             </ul>

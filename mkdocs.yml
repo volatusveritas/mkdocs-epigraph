@@ -1,13 +1,23 @@
 site_name: "Vathenaeum"
 site_description: "One's wit, in bits and bytes"
 site_author: "Volatus"
-copyright: "&copy 2021 Lucas B. \"Volatus\" Martins. Some rights reserved."
+copyright: "&copy; 2021 Lucas B. \"Volatus\" Martins. Some rights reserved."
 
 nav:
-    - "Home": "index.md"
-    - "Semifull Syntax": "collios.md"
-    - "Link Testing": "linktest.md"
+  - "Home": "index.md"
+  - "Semifull Syntax": "collios.md"
+  - "Link Testing": "linktest.md"
+
+markdown_extensions:
+  - footnotes
+  - def_list
+  - pymdownx.highlight:
+      use_pygments: false
+  - pymdownx.inlinehilite
+  - pymdownx.superfences
 
 theme:
-    name: null
-    custom_dir: "epigraphs/"
+  name: null
+  custom_dir: "epigraphs/"
+  features:
+    - content.code.annotate

@@ -9,6 +9,10 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
         <link rel="stylesheet" href="{{ base_url }}/css/main.css">
+
+        <link rel="stylesheet" href="{{ base_url }}/css/highlight-themes/gruvbox-dark-hard.css">
+        <script src="//unpkg.com/@highlightjs/cdn-assets@11.3.1/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script>
     </head>
     
 
@@ -19,28 +23,30 @@
         </header>
 
         <div class="main-display row">
-            <div class="nav-menu col-2">
-            {% if nav|length>1 %}
-                <ul>
-                {% for nav_item in nav %}
-                    {% if nav_item.children %}
-                        <li>{{ nav_item.title }}
-                            <ul>
-                            {% for nav_subitem in nav_item.children %}
-                                <li class="{% if nav_subitem.active %}current{% endif %}">
-                                    <a href="{{ nav_subitem.url|url }}">{{ nav_subitem.title }}</a>
-                                </li>
-                            {% endfor %}
-                            </ul>
-                        </li>
-                    {% else %}
-                        <li class="{% if nav_item.active %}current{% endif %}">
-                            <a href="{{ nav_item.url|url }}">{{ nav_item.title }}</a>
-                        </li>
-                    {% endif %}
-                {% endfor %}
-                </ul>
-            {% endif %}
+            <div class="sidebar col-02">
+                <div class="nav-menu">
+                {% if nav|length>1 %}
+                    <ul>
+                    {% for nav_item in nav %}
+                        {% if nav_item.children %}
+                            <li>{{ nav_item.title }}
+                                <ul>
+                                {% for nav_subitem in nav_item.children %}
+                                    <li class="{% if nav_subitem.active %}current{% endif %}">
+                                        <a href="{{ nav_subitem.url|url }}">{{ nav_subitem.title }}</a>
+                                    </li>
+                                {% endfor %}
+                                </ul>
+                            </li>
+                        {% else %}
+                            <li class="{% if nav_item.active %}current{% endif %}">
+                                <a href="{{ nav_item.url|url }}">{{ nav_item.title }}</a>
+                            </li>
+                        {% endif %}
+                    {% endfor %}
+                    </ul>
+                {% endif %}
+                </div>
             </div>
 
             <div class="content col-10">

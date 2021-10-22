@@ -264,10 +264,25 @@ Regular Markdown syntax is not processed within code blocks. E.g.,
 asterisks are just literal asterisks within a code block. This means
 it's also easy to use Markdown to write about Markdown's own syntax.
 
-```
-tell application "Foo"
-    beep askdjfklasdjfklasjdfkljsdaklfjklsadfj long line a a a  b b aklbkalsdjfklsdjfklkkajsdklfjsdklafjklasdjfk kasdjfklsadj klasdjfkl
-end tell
+This code snippet was added by Volatus in order to test syntax highlighting and
+extension usage in MkDocs. It is a basic snippet written in C++ that pretends
+to use the **TextPowertools** library.
+
+```c++
+#include <iostream>
+
+int main(int argc, char *argv[]) {
+
+  /* An annoying "Hello World" example */
+  for (auto i = 0; i < 0xFFFF; i++)
+    cout << "Hello, World!" << endl;
+
+  char c = '\n';
+  unordered_map <string, vector<string> > m;
+  m["key"] = "\\\\"; // this is an error
+
+  return -2e3 + 12l;
+}
 ```
 
 ## Span Elements

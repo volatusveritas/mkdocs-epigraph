@@ -89,7 +89,15 @@ header .subtitle {
 
 
 /* Footer styling */
-footer .footer-text { text-align: center; }
+footer {
+    text-align: center;
+
+    font-weight: 500;
+
+    color: var(--color-bg4);
+
+    margin: 16px 0px;
+}
 
 
 /* Link/anchor styling */

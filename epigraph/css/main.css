@@ -1,6 +1,5 @@
 /* Font Imports */
-/* [fira code] */
-@import url("font/fontload.css");
+@import url("firacode/fontload.css");
 
 /* External CSS Imports */
 @import url("reset.css");  /* Resetting styles */

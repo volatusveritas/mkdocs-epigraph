@@ -50,7 +50,7 @@ body {
         "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco,
         "Courier New", Courier, monospace;
     font-weight: lighter;
-    
+
     color: var(--color-fg);
     background-color: var(--color-bg);
 

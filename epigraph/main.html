@@ -23,7 +23,7 @@
         </header>
 
         <div class="main-display row">
-            <div class="nav-menu col-02">
+            <div class="nav-menu col-02-5">
             {% if nav|length>1 %}
                 <ul>
                 {% for nav_item in nav %}
@@ -47,9 +47,11 @@
             {% endif %}
             </div>
 
-            <div class="content col-10">
+            <div class="content col-07">
                 {{ page.content }}
             </div>
+
+            <div class="col-02-5"></div>
         </div>
 
         <footer>

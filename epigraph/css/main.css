@@ -98,11 +98,11 @@ footer {
 
 
 /* Link/anchor styling */
-a { 
+.content a {
     color: var(--color-aqua);
 }
 
-a:hover { text-decoration: underline; }
+.content a:hover { text-decoration: underline; }
 
 
 /* Header styling */
@@ -167,8 +167,38 @@ a:hover { text-decoration: underline; }
 
 
 /* Navigation bar styling */
-.nav-menu {
-    border: 0.5px solid var(--color-fg);
+.nav-menu > ul {
+    border-right: 0.5px solid var(--color-bg3);
+}
+
+.nav-menu > ul ul {
+    margin: 0px 1.8em;
+}
+
+.nav-menu .sublist {
+    list-style-type: circle;
+}
+
+.nav-menu li {
+    color: var(--color-fg4);
+
+    margin: 0.2em 0px;
+}
+
+.nav-menu .grouptitle {
+    font-weight: bold;
+
+    color: var(--color-fg1);
+}
+
+.nav-menu .group {
+    margin: 0.8em 0px;
+}
+
+.nav-menu .current {
+    font-weight: 500;
+
+    color: var(--color-blue);
 }
 
 
@@ -248,13 +278,13 @@ footer .footer-text { font-size: 9px; }
 
     header .title { font-size: 20px; }
     header .subtitle { font-size: 12px; }
-    
+
     footer .footer-text { font-size: 10px; }
 
     .content :is(p, li), .nav-menu li { font-size: 11px; }
 
     .content :is(pre, code) { font-size: 10px; }
-    
+
     .content h1 { font-size: 22px; }
     .content h2 { font-size: 18px; }
     .content h3 { font-size: 14px; }
@@ -269,7 +299,7 @@ footer .footer-text { font-size: 9px; }
 
     header .title { font-size: 22px; }
     header .subtitle { font-size: 13px; }
-    
+
     footer .footer-text { font-size: 11px; }
 
     .content :is(p, li), .nav-menu li { font-size: 12px; }
@@ -290,7 +320,7 @@ footer .footer-text { font-size: 9px; }
 
     header .title { font-size: 24px; }
     header .subtitle { font-size: 14px; }
-    
+
     .content :is(p, li), .nav-menu li { font-size: 14px; }
 
     .content :is(pre, code) { font-size: 14px; }

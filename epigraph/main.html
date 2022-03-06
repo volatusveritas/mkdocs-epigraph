@@ -24,12 +24,11 @@
 
         <div class="main-display row">
             <div class="nav-menu col-02-5">
-            {% if nav|length>1 %}
                 <ul>
                 {% for nav_item in nav %}
                     {% if nav_item.children %}
-                        <li>{{ nav_item.title }}
-                            <ul>
+                        <li class="group"><p class="grouptitle">{{ nav_item.title }}</p>
+                            <ul class="sublist">
                             {% for nav_subitem in nav_item.children %}
                                 <li class="{% if nav_subitem.active %}current{% endif %}">
                                     <a href="{{ nav_subitem.url|url }}">{{ nav_subitem.title }}</a>
@@ -44,7 +43,6 @@
                     {% endif %}
                 {% endfor %}
                 </ul>
-            {% endif %}
             </div>
 
             <div class="content col-07">

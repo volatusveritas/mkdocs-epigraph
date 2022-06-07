@@ -17,13 +17,12 @@
 
 
     <body>
-        <header>
-            <h1 class="title">{{ config.site_name }}</h1>
-            <p class="subtitle">{{ config.site_description }}</p>
-        </header>
-
         <div class="main-display row">
             <div class="nav-menu col-02-5">
+                <header>
+                    <h1 class="title">{{ config.site_name }}</h1>
+                    <p class="subtitle">{{ config.site_description }}</p>
+                </header>
                 <ul>
                 {% for nav_item in nav %}
                     {% if nav_item.children %}

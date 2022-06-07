@@ -80,7 +80,11 @@ header .subtitle {
 
 
 /* Headers */
-.content h1 { font-weight: 600; }
+.content h1 {
+    font-weight: 600;
+
+    text-align: center;
+}
 
 .content :is(h2, h3, h4, h5, h6) { font-weight: 500; }
 
@@ -94,6 +98,15 @@ footer {
     color: var(--color-footer);
 
     margin: 16px 0px;
+}
+
+
+/* Horizontal rule */
+hr {
+    background-image: linear-gradient(to right, transparent, var(--color-fg3));
+
+    border: 0;
+    height: 1px;
 }
 
 

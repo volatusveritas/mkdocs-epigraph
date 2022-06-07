@@ -123,6 +123,8 @@ footer {
 
 .content :is(i, em) { font-style: italic; }
 
+.content :is(p, li, dl) { text-align: justify; }
+
 
 /* Lists */
 .content > ul { list-style-type: disc; }
@@ -219,6 +221,8 @@ footer {
 /* Image media */
 .content img {
     max-width: 90%;
+    max-height: 22em;
+
     height: auto;
 
     display: block;
@@ -226,9 +230,8 @@ footer {
     margin: 1.25em auto;
 
     border-radius: 0.25em;
-
-    filter: drop-shadow(0 0 0.2em rgba(0, 0, 0, 0.25));
 }
+
 
 
 

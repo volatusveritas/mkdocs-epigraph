@@ -4,7 +4,7 @@ In the page:
 - [x] Hyperlinks
 - [x] Code: inline, block
 - [ ] Block quote
-- [ ] Images, media
+- [x] Images, media
 - [x] Lists: ordered, unordered
 - [x] Definition lists
 - [x] Website header
@@ -16,7 +16,7 @@ Styled:
 - [x] Hyperlinks
 - [x] Code: inline, block
 - [ ] Block quote
-- [ ] Images, media
+- [x] Images, media
 - [x] Lists: ordered, unordered
 - [x] Definition lists
 - [x] Website header

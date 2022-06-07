@@ -1,0 +1,23 @@
+In the page:
+- [x] Headers: all levels (h1-h6)
+- [x] Formatting: bold, italic
+- [x] Hyperlinks
+- [x] Code: inline, block
+- [ ] Block quote
+- [ ] Images, media
+- [x] Lists: ordered, unordered
+- [x] Definition lists
+- [x] Website header
+- [x] Website footer
+
+Styled:
+- [x] Headers: all levels (h1-h6)
+- [x] Formatting: bold, italic
+- [x] Hyperlinks
+- [x] Code: inline, block
+- [ ] Block quote
+- [ ] Images, media
+- [x] Lists: ordered, unordered
+- [x] Definition lists
+- [x] Website header
+- [x] Website footer

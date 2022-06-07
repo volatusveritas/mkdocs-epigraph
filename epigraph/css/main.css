@@ -10,16 +10,18 @@
     /* Base colors */
     --white:  #F0F0F0;
     --black:  #0F0F0F;
-    --d-gray: #444444;
     --gray:   #888888;
+    --m-gray: #666666;
+    --d-gray: #444444;
     --blue:   #45A5B8;
     --purple: #642CA9;
 
     /* Theme colors */
     --color-bg: var(--white);
     --color-fg: var(--black);
-    --color-fg2: var(--gray);
-    --color-fg3: var(--d-gray);
+    --color-fg2: var(--d-gray);
+    --color-fg3: var(--m-gray);
+    --color-fg4: var(--gray);
     --color-special: var(--purple);
     --color-hyperlink: var(--blue);
     --color-footer: var(--gray);
@@ -56,7 +58,7 @@ body {
 }
 
 
-/* Website header styling */
+/* Website header */
 header {
     color: var(--color-bg);
     background-color: var(--color-fg);
@@ -67,7 +69,7 @@ header {
 }
 
 header .title {
-    font-weight: bold;
+    font-weight: 600;
 
     text-transform: uppercase;
 }
@@ -77,7 +79,15 @@ header .subtitle {
 }
 
 
-/* Footer styling */
+/* Headers */
+.content h1 { font-weight: 600; }
+
+.content :is(h2, h3, h4, h5, h6) { font-weight: 500; }
+
+.content :is(h5, h6) { color: var(--color-fg4); }
+
+
+/* Website footer */
 footer {
     text-align: center;
 
@@ -87,22 +97,71 @@ footer {
 }
 
 
-/* Link/anchor styling */
-.content a {
-    color: var(--color-hyperlink);
-}
+/* Links/anchors */
+.content a { color: var(--color-hyperlink); }
 
 .content a:hover { text-decoration: underline; }
 
 
-/* Header styling */
-.content h1 { font-weight: bold; }
+/* Footnotes */
+.content .footnote-ref::before { content: "["; }
+.content .footnote-ref::after { content: "]"; }
+
+.content .footnote-ref {
+    vertical-align: super;
+    font-size: 0.70em;
+}
+
+.content .footnote p { font-size: 0.8em; }
+.content .footnote ::marker { font-size: 0.8em; }
+
+.content .footnote li { margin-top: 0.75em; }
 
 
 /* Text formatting */
 .content :is(b, strong) { font-weight: bold; }
 
 .content :is(i, em) { font-style: italic; }
+
+
+/* Lists */
+.content > ul { list-style-type: disc; }
+
+.content > :is(ul, ol) ul { list-style-type: circle; }
+
+.content ol { list-style-type: decimal; }
+
+.content ol > li::marker { color: var(--color-fg4); }
+
+
+/* Definition lists */
+.content dl { margin-left: 1.5em; }
+
+.content dd { margin-left: 1em; }
+
+.content dt {
+    font-weight: 500;
+    margin-top: 0.25em;
+}
+
+.content dd::before {
+    content: "def. ";
+    font-style: italic;
+    color: var(--color-fg4);
+}
+
+
+/* Inline code */
+.content > :is(p, ul, ol) code {
+    color: var(--color-special);
+
+    border: 0.5px solid var(--color-fg);
+    border-radius: 0.25em;
+
+    font-family: inherit;
+
+    padding: 0px 0.25em;
+}
 
 
 /* Article spacing */
@@ -121,32 +180,9 @@ footer {
 .content pre { margin: 1em 0px; }
 
 
-/* List styling */
-.content > ul { list-style-type: disc; }
-
-.content > :is(ul, ol) ul { list-style-type: circle; }
-
-.content ol { list-style-type: decimal; }
-
-.content ol > li::marker { color: var(--color-fg2); }
-
-
-/* Inline code styling */
-.content > :is(p, ul, ol) code {
-    color: var(--color-special);
-
-    border: 0.5px solid var(--color-fg);
-    border-radius: 0.25em;
-
-    font-family: inherit;
-
-    padding: 0px 0.25em;
-}
-
-
-/* Navigation bar styling */
+/* Navigation bar */
 .nav-menu > ul {
-    border-right: 0.5px solid var(--color-fg2);
+    border-right: 0.5px solid var(--color-fg4);
 }
 
 .nav-menu > ul ul {
@@ -158,15 +194,15 @@ footer {
 }
 
 .nav-menu li {
-    color: var(--color-fg2);
+    color: var(--color-fg4);
 
     margin: 0.2em 0px;
 }
 
 .nav-menu .grouptitle {
-    font-weight: bold;
+    font-weight: 600;
 
-    color: var(--color-fg3);
+    color: var(--color-fg2);
 }
 
 .nav-menu .group {
@@ -180,7 +216,7 @@ footer {
 }
 
 
-/* Image styling */
+/* Image media */
 .content img {
     max-width: 90%;
     height: auto;
@@ -228,7 +264,7 @@ header .subtitle { font-size: 12px; }
 
 footer .footer-text { font-size: 9px; }
 
-.content :is(p, li), .nav-menu li { font-size: 10px; }
+.content :is(p, li, dl), .nav-menu li { font-size: 10px; }
 
 .content :is(pre, code) { font-size: 9px; }
 
@@ -275,7 +311,7 @@ footer .footer-text { font-size: 9px; }
 
     footer .footer-text { font-size: 10px; }
 
-    .content :is(p, li), .nav-menu li { font-size: 11px; }
+    .content :is(p, li, dl), .nav-menu li { font-size: 11px; }
 
     .content :is(pre, code) { font-size: 10px; }
 
@@ -296,7 +332,7 @@ footer .footer-text { font-size: 9px; }
 
     footer .footer-text { font-size: 11px; }
 
-    .content :is(p, li), .nav-menu li { font-size: 12px; }
+    .content :is(p, li, dl), .nav-menu li { font-size: 12px; }
 
     .content :is(pre, code) { font-size: 11px; }
 
@@ -315,7 +351,7 @@ footer .footer-text { font-size: 9px; }
     header .title { font-size: 24px; }
     header .subtitle { font-size: 14px; }
 
-    .content :is(p, li), .nav-menu li { font-size: 14px; }
+    .content :is(p, li, dl), .nav-menu li { font-size: 14px; }
 
     .content :is(pre, code) { font-size: 14px; }
 

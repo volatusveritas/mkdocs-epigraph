@@ -18,12 +18,12 @@
 
     <body>
         <div class="main-display row">
-            <div class="nav-menu col-02-5">
+            <div class="helper-col col-02-5">
                 <header>
                     <h1 class="title">{{ config.site_name }}</h1>
                     <p class="subtitle">{{ config.site_description }}</p>
                 </header>
-                <ul>
+                <ul class="nav-list">
                 {% for nav_item in nav %}
                     {% if nav_item.children %}
                         <li class="group"><p class="grouptitle">{{ nav_item.title }}</p>

@@ -79,37 +79,37 @@ header .subtitle {
 
 
 /* Navigation bar */
-.nav-menu > ul {
+.nav-list {
     border-right: 0.5px solid var(--color-fg4);
     margin-top: 2em;
     padding-right: 0.75em;
 }
 
-.nav-menu > ul ul {
+.nav-list ul {
     margin: 0px 1.8em;
 }
 
-.nav-menu .sublist {
+.nav-list .sublist {
     list-style-type: circle;
 }
 
-.nav-menu li {
+.nav-list li {
     color: var(--color-fg4);
 
     margin: 0.2em 0px;
 }
 
-.nav-menu .grouptitle {
+.nav-list .grouptitle {
     font-weight: 600;
 
     color: var(--color-fg2);
 }
 
-.nav-menu .group {
+.nav-list .group {
     margin: 0.8em 0px;
 }
 
-.nav-menu .current {
+.nav-list .current {
     font-weight: 500;
 
     color: var(--color-special);
@@ -128,45 +128,10 @@ header .subtitle {
 .content :is(h5, h6) { color: var(--color-fg4); }
 
 
-/* Website footer */
-footer {
-    text-align: center;
-
-    color: var(--color-footer);
-
-    margin: 16px 0px;
-}
-
-
-/* Horizontal rule */
-.content hr {
-    background-image: linear-gradient(to right, transparent, var(--color-fg3));
-
-    border: 0;
-
-    height: 1px;
-}
-
-
 /* Links/anchors */
 .content a { color: var(--color-hyperlink); }
 
 .content a:hover { text-decoration: underline; }
-
-
-/* Footnotes */
-.content .footnote-ref::before { content: "["; }
-.content .footnote-ref::after { content: "]"; }
-
-.content .footnote-ref {
-    vertical-align: super;
-    font-size: 0.70em;
-}
-
-.content .footnote p { font-size: 0.8em; }
-.content .footnote ::marker { font-size: 0.8em; }
-
-.content .footnote li { margin-top: 0.75em; }
 
 
 /* Text formatting */
@@ -217,6 +182,56 @@ footer {
 }
 
 
+/* Image/media */
+.content img {
+    max-width: 90%;
+    max-height: 22em;
+
+    height: auto;
+
+    display: block;
+
+    margin: 1.25em auto;
+
+    border-radius: 0.25em;
+}
+
+
+/* Horizontal rule */
+.content hr {
+    background-image: linear-gradient(to right, transparent, var(--color-fg3));
+
+    border: 0;
+
+    height: 1px;
+}
+
+
+/* Footnotes */
+.content .footnote-ref::before { content: "["; }
+.content .footnote-ref::after { content: "]"; }
+
+.content .footnote-ref {
+    vertical-align: super;
+    font-size: 0.70em;
+}
+
+.content .footnote p { font-size: 0.8em; }
+.content .footnote ::marker { font-size: 0.8em; }
+
+.content .footnote li { margin-top: 0.75em; }
+
+
+/* Website footer */
+footer {
+    text-align: center;
+
+    color: var(--color-footer);
+
+    margin: 16px 0px;
+}
+
+
 /* Article spacing */
 .content :is(h1, h2, h3, h4, h5, h6) { margin-bottom: 0.25rem; }
 
@@ -231,21 +246,6 @@ footer {
 .content li { margin: 0.2em 0px; }
 
 .content pre { margin: 1em 0px; }
-
-
-/* Image media */
-.content img {
-    max-width: 90%;
-    max-height: 22em;
-
-    height: auto;
-
-    display: block;
-
-    margin: 1.25em auto;
-
-    border-radius: 0.25em;
-}
 
 
 
@@ -274,7 +274,7 @@ footer {
 
 .main-display { margin: 12px 6vw; }
 
-.main-display .nav-menu { display: none; }
+.main-display .helper-col { display: none; }
 
 header .title { font-size: 18px; }
 
@@ -282,7 +282,7 @@ header .subtitle { font-size: 12px; }
 
 footer .footer-text { font-size: 9px; }
 
-.content :is(p, li, dl), .nav-menu li { font-size: 10px; }
+.content :is(p, li, dl), .helper-col li { font-size: 10px; }
 
 .content :is(pre, code) { font-size: 9px; }
 
@@ -320,7 +320,7 @@ footer .footer-text { font-size: 9px; }
     .col-12   { width: calc(var(--col-unit) * 12.0); }
     .col-12-5 { width: calc(var(--col-unit) * 12.5); }
 
-    .main-display .nav-menu { display: initial; }
+    .main-display .helper-col { display: initial; }
 
     .main-display { margin: 14px 6vw; }
 
@@ -329,7 +329,7 @@ footer .footer-text { font-size: 9px; }
 
     footer .footer-text { font-size: 10px; }
 
-    .content :is(p, li, dl), .nav-menu li { font-size: 11px; }
+    .content :is(p, li, dl), .helper-col li { font-size: 11px; }
 
     .content :is(pre, code) { font-size: 10px; }
 
@@ -350,7 +350,7 @@ footer .footer-text { font-size: 9px; }
 
     footer .footer-text { font-size: 11px; }
 
-    .content :is(p, li, dl), .nav-menu li { font-size: 12px; }
+    .content :is(p, li, dl), .helper-col li { font-size: 12px; }
 
     .content :is(pre, code) { font-size: 11px; }
 
@@ -369,7 +369,7 @@ footer .footer-text { font-size: 9px; }
     header .title { font-size: 24px; }
     header .subtitle { font-size: 14px; }
 
-    .content :is(p, li, dl), .nav-menu li { font-size: 14px; }
+    .content :is(p, li, dl), .helper-col li { font-size: 14px; }
 
     .content :is(pre, code) { font-size: 14px; }
 

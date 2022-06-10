@@ -6,7 +6,4 @@ makes everything look organized and predictably layed out. The font size is
 adjusted so that it is always big enough to be extremely legible and small
 enough to fit the most amount of content on screen.
 
-This theme makes use of (or uses parts of) two other individual projects that
-are dear to my heart: [the gruvbox
-theme](https://github.com/morhetz/gruvbox/)'s color palette and [the Fira Code
-monospaced font](https://github.com/tonsky/FiraCode/).
+This theme makes use of [the Fira Code monospaced font](https://github.com/tonsky/FiraCode/).

@@ -1,7 +1,7 @@
 site_name: "Epigraph"
 site_description: "An engraving in web's history"
 site_author: "Volatus"
-copyright: "&copy; 2021 Lucas B. \"Volatus\" Martins. Some rights reserved."
+copyright: "&copy; 2021–2022 Lucas B. \"Volatus\" Martins. Some rights reserved."
 
 nav:
   - "Home": "index.md"

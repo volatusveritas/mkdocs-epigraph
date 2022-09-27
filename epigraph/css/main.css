@@ -136,6 +136,7 @@ header .subtitle {
 
 
 /* Text formatting */
+.content :is(b, strong) { font-weight: bold; }
 .content :is(i, em) { font-style: italic; }
 
 .content :is(p, li, dl) { text-align: justify; }
@@ -247,7 +248,7 @@ footer {
 
 
 /* Article spacing */
-.content :is(h1, h2, h3, h4, h5, h6) { margin-bottom: 0.25rem; }
+.content :is(h1, h2, h3, h4, h5, h6) { margin-bottom: 0.75rem; }
 
 .content :is(h2, h3, h4, h5, h6) { margin-top: 1.2em; }
 

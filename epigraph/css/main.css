@@ -27,7 +27,7 @@
     --color-hyperlink: var(--blue);
     --color-footer: var(--gray);
 
-    --text-size: 12px;
+    --text-size: 13px;
 
     /* Unit variables */
     --col-unit: calc(100% / 12);

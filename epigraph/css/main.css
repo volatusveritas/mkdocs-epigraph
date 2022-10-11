@@ -40,16 +40,29 @@
 }
 
 
+html {
+    height: 100%;
+}
+
+
 body {
+    display: flex;
+    flex-direction: column;
+
     width: 100%;
+    height: 100%;
 
     font-family: "EB Garamond", serif;
-    /* font-weight: 500; */
 
     color: var(--color-fg);
     background-color: var(--color-bg);
 
     line-height: 1.25;
+}
+
+
+.content {
+    flex: 1 0 auto;
 }
 
 
@@ -231,11 +244,13 @@ header .subtitle {
 
 /* Website footer */
 footer {
+    flex-shrink: 0;
+
     text-align: center;
 
     color: var(--color-footer);
 
-    margin: 16px 16px;
+    margin: -16px 16px 16px;
 }
 
 
@@ -287,7 +302,10 @@ footer {
     padding: 15px;
 }
 
-.main-display { margin: 14px 6vw; }
+.main-display {
+    margin: 14px 6vw;
+    height: 100%;
+}
 
 
 /* 768px and below */

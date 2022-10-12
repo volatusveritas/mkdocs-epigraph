@@ -54,6 +54,8 @@
             <div class="reading-padding col-02-5"></div>
 
             <div class="content col-07">
+                <h1 id="{{ page.meta.title|lower|replace(' ', '-') }}">{{ page.meta.title }}</h1>
+                <div class="signature"><p class="signature-text">Written by <span class="signature-author">{{ page.meta.author }}</span></p></div>
                 {{ page.content }}
             </div>
 

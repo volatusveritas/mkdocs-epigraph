@@ -277,9 +277,12 @@ footer {
 
 
 /* Article spacing */
-.signature { margin-top: 0.125rem; }
+.signature {
+    margin-top: 0.125rem;
+    margin-bottom: 1.4rem;
+}
 
-.signature, .content :is(h2, h3, h4, h5, h6) { margin-bottom: 0.75rem; }
+.content :is(h2, h3, h4, h5, h6) { margin-bottom: 0.75rem; }
 
 .content :is(h2, h3, h4, h5, h6) { margin-top: 1.2em; }
 
